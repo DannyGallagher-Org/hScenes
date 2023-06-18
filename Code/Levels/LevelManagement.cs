@@ -43,7 +43,7 @@ namespace hScenes.Levels
 			Promise.All(asyncLoadList)
 				.Then(() =>
 				{
-					SceneManager.SetActiveScene(SceneManager.GetSceneByName(additiveScene.LightingScene.Value));
+					SceneManager.SetActiveScene(SceneManager.GetSceneByName(additiveScene.LightingScene));
 					UnloadUnneccesaryScenes(listOfOldScenes);
 				})
 				.Finally(() => promise.Resolve())

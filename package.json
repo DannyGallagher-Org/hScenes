@@ -1,7 +1,7 @@
 {
   "name": "com.houseofwire.hscenes",
   "displayName": "hScenes",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "unity": "2018.1",
   "description": "House of Wire Scene Management",
   "keywords": [ "core", "scenes", "houseofwire" ],

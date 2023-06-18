@@ -1,5 +1,4 @@
 ﻿using System;
-using hUtility.ScriptableVariables.Strings;
 using SerializableDictionary.Implementations;
 using UnityEngine;
 
@@ -9,8 +8,8 @@ namespace Levels
     [Serializable]
     public class AdditiveScene : ScriptableObject
     {
-        public StringReference Name = new StringReference();
-        public StringReference LightingScene = new StringReference();
+        public string Name;
+        public string LightingScene;
 
         [SerializeField]
         private SDStringString _optionalLayers;
