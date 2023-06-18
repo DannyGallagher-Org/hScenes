@@ -1,14 +1,12 @@
 {
     "name": "hscenes",
+    "rootNamespace": "",
     "references": [
-        "com.houseofwire.hutility"
+        "hUtility"
     ],
-    "optionalUnityReferences": [],
     "includePlatforms": [
         "Editor",
-        "LinuxStandalone32",
         "LinuxStandalone64",
-        "LinuxStandaloneUniversal",
         "macOSStandalone",
         "WSA",
         "WindowsStandalone32",
@@ -20,5 +18,6 @@
     "precompiledReferences": [],
     "autoReferenced": true,
     "defineConstraints": [],
-    "versionDefines": []
+    "versionDefines": [],
+    "noEngineReferences": false
 }
