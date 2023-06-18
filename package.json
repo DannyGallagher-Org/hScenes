@@ -7,5 +7,6 @@
   "keywords": [ "core", "scenes", "houseofwire" ],
   "category": "houseofwire",
   "dependencies": {
+  	"com.houseofwire.hutility": "https://github.com/DannyGallagher-Org/hUtility.git",
   }
 }
