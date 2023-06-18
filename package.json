@@ -1,11 +1,6 @@
 {
-  "name": "com.houseofwire.hScenes",
-  "displayName": "hScenes",
-  "version": "1.1.1",
-  "unity": "2018.1",
-  "description": "House of Wire Scenes Management",
-  "keywords": [ "core", "scenes", "houseofwire" ],
-  "category": "houseofwire",
-  "dependencies": {
-  }
+"name": "com.houseofwire.hScenes",
+"displayName": "hScenes",
+"description": "House of Wire Scene Manager",
+"version": "1.0.0"
 }
