@@ -1,6 +1,8 @@
 {
     "name": "hscenes",
-    "references": [],
+    "references": [
+        "com.houseofwire.hutility"
+    ],
     "optionalUnityReferences": [],
     "includePlatforms": [
         "Editor",
