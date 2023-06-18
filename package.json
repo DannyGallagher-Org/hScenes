@@ -1,12 +1,13 @@
 {
   "name": "com.houseofwire.hscenes",
   "displayName": "hScenes",
-  "version": "1.1.4",
+  "version": "1.2.0",
   "unity": "2018.1",
   "description": "House of Wire Scene Management",
   "keywords": [ "core", "scenes", "houseofwire" ],
   "category": "houseofwire",
-  "dependencies": {
-  	"com.houseofwire.hutility": "https://github.com/DannyGallagher-Org/hUtility.git",
+  "dependencies":
+  {
+    "com.houseofwire.hutility": "1.1.0"
   }
 }
