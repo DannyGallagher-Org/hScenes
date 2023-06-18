@@ -1,12 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Extensions;
+using hUtility.ScriptableVariables.Bools;
 using Levels;
 using UnityEditor;
 using UnityEditor.SceneManagement;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using Object = UnityEngine.Object;
 
 namespace Editor
 {
@@ -129,20 +128,19 @@ namespace Editor
                 {
                     if (GUILayout.Button("Add Requirement"))
                     {
-                        throw new NotImplementedException();
-                        // var path = EditorUtility.OpenFilePanel("Choose data for requirement",
-                        //         $"{Application.dataPath}",
-                        //         "asset")
-                        //     .Replace(Application.dataPath, string.Empty);
-                        // if (path.Length != 0)
-                        // {
-                        //     var data = AssetDatabase.LoadAssetAtPath<BoolVariable>($"Assets{path}");
-                        //     Debug.Log(data);
-                        //     if (data != null)
-                        //         gameScene.Value.StateLayers[layerName] = data.name;
-                        //
-                        //     EditorUtility.SetDirty(gameScene.Value);
-                        // }
+                        var path = EditorUtility.OpenFilePanel("Choose data for requirement",
+                                $"{Application.dataPath}",
+                                "asset")
+                            .Replace(Application.dataPath, string.Empty);
+                        if (path.Length != 0)
+                        {
+                            var data = AssetDatabase.LoadAssetAtPath<BoolVariable>($"Assets{path}");
+                            Debug.Log(data);
+                            if (data != null)
+                                gameScene.Value.StateLayers[layerName] = data.name;
+
+                            EditorUtility.SetDirty(gameScene.Value);
+                        }
                     }
                 }
                 

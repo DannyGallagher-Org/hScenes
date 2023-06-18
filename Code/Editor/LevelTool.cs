@@ -92,7 +92,7 @@ namespace Editor
             try
             {
                 var newLevel = ScriptableObjectUtility.CreateAsset<AdditiveScene>($"Assets/Data/Global/Scenes/{name}.asset");
-                newLevel.Name = name;
+                newLevel.Name.ConstantValue = name;
                 return true;
             }
             catch (Exception e)
@@ -131,7 +131,7 @@ namespace Editor
                 GUI.color = Color.white;
                 GUILayout.BeginHorizontal();
                 {
-                    GUILayout.Label($"{gameScene.Value.name} ({gameScene.Value.Name})", _levelElementStyle, GUILayout.Width(500));
+                    GUILayout.Label($"{gameScene.Value.name} ({gameScene.Value.Name.Value})", _levelElementStyle, GUILayout.Width(500));
 
                     if (GUILayout.Button("Load All", GUILayout.Width(80)))
                         LoadLevel(gameScene.Value, null);
@@ -155,11 +155,11 @@ namespace Editor
                             
                             GUILayout.BeginHorizontal();
                             GUILayout.Label("Name: ", GUILayout.Width(60));
-                            GUILayout.Label(gameScene.Value.Name);
+                            GUILayout.Label(gameScene.Value.Name.Value);
                             GUILayout.EndHorizontal();
                             GUILayout.BeginHorizontal();
                             GUILayout.Label("Lighting: ", GUILayout.Width(60));
-                            GUILayout.Label(gameScene.Value.LightingScene);
+                            GUILayout.Label(gameScene.Value.LightingScene.Value);
                             GUILayout.EndHorizontal();
 
                             if (EditorGUI.EndChangeCheck())
@@ -304,7 +304,7 @@ namespace Editor
         private static void FinishLoading(Action onComplete, AdditiveScene additiveScene)
         {
             onComplete?.Invoke();
-            SceneManager.SetActiveScene(SceneManager.GetSceneByName(additiveScene.LightingScene));
+            SceneManager.SetActiveScene(SceneManager.GetSceneByName(additiveScene.LightingScene.Value));
             EditorUtility.ClearProgressBar();
         }
 

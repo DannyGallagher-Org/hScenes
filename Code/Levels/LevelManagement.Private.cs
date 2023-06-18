@@ -35,7 +35,7 @@ namespace hScenes.Levels
 				.Catch(Debug.LogWarning)
 				.Then(() =>
 				{
-					var sceneByName = SceneManager.GetSceneByName(additiveScene.LightingScene);
+					var sceneByName = SceneManager.GetSceneByName(additiveScene.LightingScene.Value);
 					SceneManager.SetActiveScene(sceneByName);
 				})
 				.Catch(Debug.LogWarning)
