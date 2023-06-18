@@ -6,8 +6,6 @@
   "description": "House of Wire Scene Management",
   "keywords": [ "core", "scenes", "houseofwire" ],
   "category": "houseofwire",
-  "dependencies":
-  {
-    "com.houseofwire.hutility": "1.1.0"
+  "dependencies": {
   }
 }
